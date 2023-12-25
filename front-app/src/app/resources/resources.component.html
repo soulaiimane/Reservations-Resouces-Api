@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h2>Resources</h2>
+    </div>
+    <div class="card-body " *ngIf="resources">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>ID</th> <th>Name</th> <th>Resource Type</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let r of resources">
+          <td>{{r.id}}</td>
+          <td>{{r.name}}</td>
+          <td>{{r.resourceType}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
