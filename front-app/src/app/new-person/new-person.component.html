@@ -1,0 +1,28 @@
+<div class="container mt-2 col-md-9">
+  <div class="card">
+    <div class="card-header text-bg-secondary"> <h2> Add New Person</h2></div>
+    <div class="card-body">
+      <form (ngSubmit)="handleNewCustomer()" [formGroup]="newPersonFormGroup" >
+        <div class="mb-3">
+          <label class="form-label"> Name : </label>
+          <input class="form-control" formControlName="name" type="text">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label"> Email : </label>
+          <input class="form-control" formControlName="email" type="email">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label"> Function : </label>
+          <input class="form-control" formControlName="function" type="text">
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-info form-control"> Save </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>

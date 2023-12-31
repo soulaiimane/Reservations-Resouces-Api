@@ -13,7 +13,7 @@ export class ResourcesComponent implements OnInit{
   constructor(private http:HttpClient,private router:Router) {
   }
   ngOnInit(): void {
-    this.http.get("http://localhost:8081/resources").subscribe({
+    this.http.get("http://localhost:9999/resource-service/resources").subscribe({
       next:(data)=>{
         this.resources=data
       },error:(err)=>{
@@ -23,4 +23,9 @@ export class ResourcesComponent implements OnInit{
   }
 
 
+  handleResourceReservations(resourceId:number) {
+    this.router.navigateByUrl("/resourceReservations/"+resourceId)
+
+
+  }
 }

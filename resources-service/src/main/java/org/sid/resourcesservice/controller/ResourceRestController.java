@@ -14,7 +14,6 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @CrossOrigin("http://localhost:4200")
-
 public class ResourceRestController {
     private ResourceServiceImpl resourceService;
     @GetMapping("/resources")
@@ -23,7 +22,6 @@ public class ResourceRestController {
 
     }
     @GetMapping("/resources/{resourceId}")
-
     public ResourceDto resourceById(@PathVariable Long resourceId) throws ResourceNotFoundException{
         return resourceService.resourceById(resourceId);
     }

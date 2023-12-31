@@ -20,6 +20,7 @@ public class Reservation {
     private Date date;
     private int durationPerDay;
     private Long resourceId;
+    private String resourceName;
     @ManyToOne
     private Person person;
 

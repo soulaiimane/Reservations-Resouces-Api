@@ -37,14 +37,15 @@ public class ReservationServiceApplication {
 				Person person=new Person();
 				person.setName(p);
 				person.setEmail(p+"@Gmail.com");
-				person.setFunction(Math.random()>0.1?"Prof":"Student");
+				person.setFunction(Math.random()>0.3?"Prof":"Student");
 				Person savedP = personRepository.save(person);
 				for (ResourceDto resourceDto:resourceList) {
 					Reservation reservation=new Reservation();
-					reservation.setName("reservation");
+					reservation.setName("reservation of "+resourceDto.getName());
 					reservation.setDate(new Date());
-					reservation.setDurationPerDay(random.nextInt(0,10));
+					reservation.setDurationPerDay(random.nextInt(1,10));
 					reservation.setResourceId(resourceDto.getId());
+					reservation.setResourceName(resourceDto.getName());
 					reservation.setContext(Math.random()>0.5?"Réunion d'équipe":"Présentation client");
 					reservation.setPerson(savedP);
 					reservationRepository.save(reservation);

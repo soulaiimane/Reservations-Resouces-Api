@@ -1,4 +1,5 @@
-package org.soulaimane.Orderservice.security;
+/*
+package org.sid.reservationservice.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -44,4 +45,4 @@ public class SecurityConfig {
         source.registerCorsConfiguration("/**", configuration);
         return source;
     }
-}
+}*/

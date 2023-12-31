@@ -13,7 +13,7 @@ export class ReservationsComponent implements OnInit{
   constructor(private http:HttpClient,private router:Router) {
   }
   ngOnInit(): void {
-    this.http.get("http://localhost:8082/reservations").subscribe({
+    this.http.get("http://localhost:9999/reservation-service/reservations").subscribe({
       next:(data)=>{
         this.reservations=data
       },error:(err)=>{
@@ -22,5 +22,15 @@ export class ReservationsComponent implements OnInit{
     })
   }
 
+  handleDeleteReservation(reservationId: number) {
+    this.http.delete("http://localhost:8082/reservations/"+reservationId).subscribe({
+      next:(data)=>{
+        alert("The Reservation With Id= " + reservationId+" Was Deleted SuccessFully")
+        this.ngOnInit()
+      }, error: (err) => {
+        console.log(err.message)
+      }
+    })
+  }
 
 }

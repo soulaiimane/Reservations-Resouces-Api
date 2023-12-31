@@ -1,13 +1,14 @@
-<div class="container">
+<div class="container mt-2">
   <div class="card">
-    <div class="card-header">
+    <div class="card-header text-bg-secondary">
       <h2>Resources</h2>
     </div>
     <div class="card-body " *ngIf="resources">
       <table class="table">
         <thead>
         <tr>
-          <th>ID</th> <th>Name</th> <th>Resource Type</th>
+          <th class="text-bg-dark">ID</th> <th class="text-bg-dark">Name</th> <th class="text-bg-dark">Resource Type</th>
+          <th class="text-bg-dark"></th>
         </tr>
         </thead>
         <tbody>
@@ -15,6 +16,11 @@
           <td>{{r.id}}</td>
           <td>{{r.name}}</td>
           <td>{{r.resourceType}}</td>
+          <td>
+            <button  (click)="handleResourceReservations(r.id)" class="btn btn-success mx-1"  >
+              Reservations
+            </button>
+          </td>
         </tr>
         </tbody>
       </table>

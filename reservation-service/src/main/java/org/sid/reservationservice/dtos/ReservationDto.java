@@ -19,6 +19,7 @@ public class ReservationDto {
     private Date date;
     private int durationPerDay;
     private Long resourceId;
+    private String resourceName;
     private PersonDto personDto;
 
 

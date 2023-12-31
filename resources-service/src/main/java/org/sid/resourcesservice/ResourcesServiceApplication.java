@@ -22,7 +22,7 @@ public class ResourcesServiceApplication {
 	@Bean
 	CommandLineRunner start(ResourceServiceImpl resourceService){
 		return args -> {
-			Stream.of("Pc","Telephone","Microphone","Mouse","KeyBord","AirPods","Charge").forEach(r->{
+			Stream.of("Pc","Phone","Microphone","Mouse","KeyBord","AirPods","Charger","Router","Remote").forEach(r->{
 				ResourceDto resourceDto=new ResourceDto();
 				resourceDto.setName(r);
 				resourceDto.setResourceType(Math.random()>0.2? ResourceType.MATERIEL_INF0:ResourceType.MATERIEL_AUDIO_VUSUEL);
